@@ -11,7 +11,7 @@ import { connectDB } from './config/db.js';
 connectDB();
 
 const app = express();
-app.use(cors());
+app.use(cors({"origin":"*"}));
 app.use(express.json());
 
 app.use('/api', authRoutes);
